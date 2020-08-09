@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filebin</title>
+</head>
+
+<body>
+  <form method="POST" action="upload-multiple" enctype="multipart/form-data">
+    <div>
+      <label>Select multiple files:</label>
+      <input type="file" name="multiple_files" multiple />
+    </div>
+    <input type="hidden" id="shareUrl" name="shareUrl" value="<%- newurl %>">
+    <div>
+      <input type="submit" name="upload-button" value="Upload" />
+    </div>
+  </form>
+
+  <h3>
+    <a href="share/<%- newurl %>" target="_blank">
+      Share URL
+    </a>
+  </h3>
+</body>
+
+</html>
