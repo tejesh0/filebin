@@ -1,4 +1,4 @@
-*** Running the app:
+## Running the app:
 
 ```
 git clone https://github.com/tejesh0/filebin.git
@@ -7,7 +7,7 @@ npm install
 node fileserver.js
 ```
 
-*** Assumptions & Considerations: 
+## Assumptions & Considerations: 
 
 Limited 30 files per upload
 
@@ -23,13 +23,13 @@ DB stores Date epoch time in IST timezone
 
 Took file_size as INTEGER because max value is 20MB, if this is upgraded, field type need to be Altered.
 
-*** Todo tasks / Workflow:
+### Todo tasks / Workflow:
 
-  [x] Each time new page is rendered, render the Form with hidden filed containing the shareUrl
-  [x] Save shareUrl and information of files uploaded to DB
-  [x] Display File Too Large error if file size is greater than 20mb
-  [x] Overriding filenames by adding suffix
-  [x] Secure filenames using package sanitize-filenames
-  [x] Generate Link and status, created_at time, size of file, extension
-  [x] In preview link route (actual url), show download option
-  [x] When get parameter contains ?download=true, download the file, and set the status as true
+- [x] Each time new page is rendered, render the Form with hidden filed containing the shareUrl
+- [x] Save shareUrl and information of files uploaded to DB
+- [x] Display File Too Large error if file size is greater than 20mb
+- [x] Overriding filenames by adding suffix
+- [x] Secure filenames using package sanitize-filenames
+- [x] Generate Link and status, created_at time, size of file, extension
+- [x] In preview link route (actual url), show download option
+- [x] When get parameter contains ?download=true, download the file, and set the status as true
