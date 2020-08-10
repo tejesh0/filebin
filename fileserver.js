@@ -17,6 +17,7 @@ app.set('view engine', 'ejs');
 app.use(morgan('dev'));
 
 const DESTINATION = 'uploads/'
+const MAX_FILES_COUNT = 30
 
 const storage = multer.diskStorage({
   destination: DESTINATION,
@@ -55,7 +56,7 @@ app.post('/upload-multiple', (req, res) => {
       fieldNameSize: 500, // max string length of filename
       fileSize: 20971520
     }
-  }).array('multiple_files', 4)
+  }).array('multiple_files', MAX_FILES_COUNT)
 
   upload(req, res, function (err) {
     if (req.fileValidationError) {
